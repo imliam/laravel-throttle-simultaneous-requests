@@ -1,0 +1,49 @@
+{
+    "name": "imliam/laravel-throttle-simultaneous-requests",
+    "description": "Throttle the current user's requests based on how many requests are currently being executed.",
+    "keywords": [
+        "imliam",
+        "laravel",
+        "middleware",
+        "throttle",
+        "api",
+        "laravel-throttle-simultaneous-requests"
+    ],
+    "homepage": "https://github.com/imliam/laravel-throttle-simultaneous-requests",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Liam Hammett",
+            "email": "liam@liamhammett.com",
+            "homepage": "https://liamhammett.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "larapack/dd": "^1.0",
+        "orchestra/testbench": "^3.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ImLiam\\ThrottleSimultaneousRequests\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ImLiam\\ThrottleSimultaneousRequests\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "test:windows": "vendor\\bin\\phpunit",
+        "test-coverage:windows": "vendor\\bin\\phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
