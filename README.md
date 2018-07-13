@@ -50,7 +50,7 @@ protected $routeMiddleware = [
 You can use the middleware like any other. For example, to limit a particular endpoint to only 3 concurrent requests by the same user:
 
 ``` php
-Route::get('/')->middleware('simultaneous:3');
+Route::get('/', 'HomeController@index')->middleware('simultaneous:3');
 ```
 
 ### Why not use queues?
