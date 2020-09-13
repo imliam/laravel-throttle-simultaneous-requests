@@ -10,12 +10,12 @@ use Illuminate\Http\Exceptions\ThrottleRequestsException;
 class ThrottleSimultaneousRequests
 {
     /**
-     * Amount of time (in minutes) the last request will be stored,
+     * Amount of time (in seconds) the last request will be stored,
      * in the cache, in the case the middleware never terminates.
      *
      * @var integer
      */
-    protected $cacheForMinutes = 60;
+    protected $cacheForSeconds = 3600;
 
     /**
      * The limit of concurrent requests the current user can run.
@@ -149,7 +149,7 @@ class ThrottleSimultaneousRequests
             $value = Cache::get($this->signature) + 1;
         }
 
-        Cache::put($this->signature, $value, $this->cacheForMinutes);
+        Cache::put($this->signature, $value, $this->cacheForSeconds);
 
         return $value;
     }
