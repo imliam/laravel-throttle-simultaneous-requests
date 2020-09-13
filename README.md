@@ -33,7 +33,7 @@ When performing an action only the current user can perform, this also helps to 
 You can install the package with [Composer](https://getcomposer.org/) using the following command:
 
 ```bash
-composer require imliam/laravel-throttle-simultaneous-requests:^1.0.0
+composer require imliam/laravel-throttle-simultaneous-requests:^2.0.0
 ```
 
 Once installed to your project, add the middleware to your `App\Http\Kernel::$routeMiddleware` array.
