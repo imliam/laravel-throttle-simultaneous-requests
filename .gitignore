@@ -4,3 +4,4 @@ docs
 vendor
 coverage
 SCRATCH.md
+.phpunit.result.cache
